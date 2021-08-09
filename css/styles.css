@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;900&display=swap');
+
+:root {
+	/* ### colors ### */
+	/* ## primary ##  */
+	--vivid-orange: hsl(22, 89%, 52%);
+	--light-orange: hsl(22, 100%, 69%);
+	/* deep blue  */
+	--very-dark-blue: hsl(220, 50%, 17%);
+	/* mostly desaturated dark blue  */
+	--very-desaturated-dark-blue: hsl(221, 23%, 58%);
+
+	/* ## neutral ## */
+	--light-grayish-blue: hsl(198, 28%, 93%);
+	--white: #fff;
+
+	/* ### typography ###  */
+
+	/* ## text size ##   */
+	/* # body copy #  */
+
+	--fs-body: 1rem;
+
+	/* ## font family ## */
+	--ff-primary: 'Barlow', sans-serif;
+}
+
+/* general style and structure  */
+
+html {
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: var(--fs-body);
+	color: var(--very-desaturated-dark-blue);
+	line-height: 1.63em;
+	min-height: calc(100vh - 100px);
+}
+
+h1,
+h2,
+h3 {
+	color: var(--very-dark-blue);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+.btn {
+	border: none;
+	border-radius: 0.5rem;
+	padding: .69em 0.88em;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.63rem;
+}
+
+.nav-button {
+	color: var(--very-dark-blue);
+	background-color: var(--light-grayish-blue);
+}
+
+.title-btn {
+	color: var(--white);
+	background-color: var(--vivid-orange);
+}
+
+.container {
+	max-width: 69.38rem;
+	margin: 0 auto;
+}
+
+.logo-nav,
+.title-content,
+.wireless-keyboard-content,
+.keyboard-features {
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* header section  */
+
+.logo-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2.5rem 0 3.88rem;
+}
+
+.logo-nav img {
+	max-width: 100%;
+}
+
+/* title section  */
+
+.title-content > * + * {
+	margin-top: 2em;
+}
+
+.title-content {
+	padding: 4em 0 4em;
+}
+
+.title-content h1 {
+	font-weight: 900;
+	font-size: 3rem;
+	line-height: 3rem;
+}
+
+.release {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 0;
+	margin-left: 2em;
+	margin-right: 0;
+}
+
+.img-keyboard {
+	width: 90%;
+	max-width: 540px;
+	display: block;
+	margin-right: 0;
+	margin-left: auto;
+	border-radius: 1.25rem 0 0 1.25rem;
+}
+
+/* wireless keyboard section  */
+
+.wireless-keyboard {
+	padding: 1.5rem 0 6.88rem;
+}
+
+.wireless-keyboard > div + div {
+	margin-top: 4.69em;
+}
+
+.wireless-keyboard-img > picture {
+	margin-right: 1.5em;
+}
+
+.wireless-keyboard-img {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.phone-keyboard {
+	background-color: var(--vivid-orange);
+	border-radius: 0 1.25rem 1.25rem 0;
+}
+
+.phone-keyboard-img {
+	display: block;
+	position: relative;
+	border-radius: 0 1.25rem 1.25rem 0;
+	mix-blend-mode: multiply;
+	opacity: 75%;
+	margin-bottom: 0;
+}
+
+.glass-keyboard-img {
+	border-radius: 1.25rem;
+}
+
+/* wireless keyboard content  */
+
+.wireless-keyboard-content {
+	text-align: center;
+	padding: 0 .8em;
+}
+
+.wireless-keyboard-content h3 {
+	font-size: 2rem;
+	line-height: 2.25rem;
+	margin-bottom: 1.5em;
+}
+
+/* keyboard section  */
+.keyboard-features {
+	text-align: center;
+	padding: 0 .5em 10.94em;
+}
+
+.keyboard-features > section + section {
+	margin-top: 4rem;
+}
+
+.keyboard-features h3 {
+	font-size: 1.5rem;
+	line-height: 1.75rem;
+	margin: 3rem 0 1.5rem;
+	padding: 0 2.5em;
+}
+
+.keyboard-features-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 65px;
+	height: 65px;
+	border-radius: 1rem;
+	background-color: var(--vivid-orange);
+}
+
+/* footer section  */
+
+small {
+	display: block;
+	text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+	/* general structure and styling  */
+
+	.container {
+		width: 90%;
+	}
+
+	.logo-nav,
+	.title-content,
+	.wireless-keyboard-content,
+	.keyboard-features {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	/* title section  */
+
+	.title-d-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.title-content {
+		padding: 0;
+		margin: auto 0;
+	}
+
+	.img-keyboard {
+		width: 100%;
+		transition: all 1s ease-out;
+		transform: translateX(20%);
+	}
+
+	/* wireless keyboard section  */
+
+	.wireless-keyboard {
+		padding: 2.5rem 0 6.88rem;
+	}
+
+	.wireless-keyboard-d-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr .5fr;
+	}
+
+	.wireless-keyboard-content {
+		text-align: left;
+		display: flex;
+		grid-row: 2;
+		grid-column: 1 / -1;
+		padding: 0;
+	}
+
+	.wireless-keyboard-img {
+		grid-column: 1 / -1;
+	}
+
+	.wireless-keyboard-content p {
+		padding-left: 6em;
+	}
+
+	.phone-keyboard {
+		border-radius: 1.25rem;
+	}
+
+	.phone-keyboard-img {
+		border-radius: 1.25rem;
+	}
+
+	/* keyboard features section  */
+	.keyboard-features {
+		text-align: left;
+	}
+
+	.keyboard-features-img {
+		margin: 0;
+	}
+
+	.keyboard-features-d-flex {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 5em;
+	}
+
+	.keyboard-features > section + section {
+		margin-top: 0;
+	}
+
+	.keyboard-features h3 {
+		/* font-size: 1.5rem; */
+		/* line-height: 1.75rem; */
+		/* margin: 3rem 0 1.5rem; */
+		padding: 0;
+		padding-right: 7.5rem;
+	}
+}
+
+@media screen and (min-width: 67.5em) {
+	/* general style and structure for desktop  */
+
+	body {
+		position: relative;
+	}
+
+	body::before {
+		content: '';
+		inset: 0;
+		position: absolute;
+		background-image: url('../assets/shared/pattern-square.svg');
+		background-repeat: no-repeat;
+		background-position: bottom left;
+		transform: translate(-10%, -39.5%);
+		z-index: -1;
+	}
+
+	body::after {
+		content: '';
+		inset: 0;
+		position: absolute;
+		background-image: url('../assets/shared/pattern-square.svg');
+		background-repeat: no-repeat;
+		background-position: top right;
+		transform: translate(10%, 8%);
+		z-index: -1;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	/* header section  */
+	.nav-button {
+		transition: all 0.5s ease-in;
+	}
+
+	.nav-button:hover {
+		cursor: pointer;
+		background-color: var(--very-dark-blue);
+		color: #fff;
+	}
+
+	/* title section  */
+
+	.title {
+		position: relative;
+	}
+
+	.img-keyboard {
+		position: relative;
+		border-radius: 1.25rem;
+		transition: all 1s ease-out;
+		transform: translateX(0%);
+	}
+
+	.title-content h1 {
+		font-size: 3.5rem;
+		line-height: 3.5rem;
+	}
+
+	.title-paragraph {
+		font-size: 1.13rem;
+		margin: 1.5em 0 2.5em;
+		padding-right: 8em;
+	}
+
+	.title-btn {
+		transition: all 0.5s ease-in;
+	}
+
+	.title-btn:hover {
+		background-color: var(--light-orange);
+	}
+
+	/* wireless keyboard section  */
+
+	.wireless-keyboard {
+		padding: 1.88rem 0 6.88rem;
+	}
+
+	.wireless-keyboard-d-grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr 3em;
+		row-gap: 1.5em;
+		/* grid-template-rows: 1fr .5fr; */
+	}
+
+	.wireless-keyboard-img {
+		position: relative;
+		grid-column: 1 / span 2;
+	}
+
+	.wireless-keyboard-content {
+		grid-row: 1;
+		grid-column: 3;
+
+		flex-direction: column;
+		text-align: left;
+		margin: auto 0;
+		padding: 3rem;
+	}
+
+	.wireless-keyboard-content p {
+		padding: 0;
+	}
+
+	.phone-keyboard-img {
+		max-width: 255px;
+	}
+
+	.glass-keyboard-img {
+		max-width: 445px;
+	}
+
+	/* .keyboard features section  */
+
+	.keyboard-features-d-flex {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+		gap: 3em;
+	}
+
+	.keyboard-features h3 {
+		padding-right: 2.75em;
+		margin: 0;
+		margin: 3rem 0 1.5rem;
+	}
+
+	.keyboard-features p {
+		padding-right: 1em;
+	}
+}
